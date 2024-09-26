@@ -9,7 +9,12 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.21.1",
     "axios": "^1.7.7",
+    "braintree-web-drop-in-react": "^1.2.1",
     "buffer": "^6.0.3",
+    "debug": "^4.3.7",
+    "dotenv-expand": "^11.0.6",
+    "isexe": "^3.1.1",
+    "moment": "^2.30.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
@@ -18,7 +23,8 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "which": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

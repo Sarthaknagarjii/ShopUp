@@ -61,8 +61,8 @@ const Header = () => {
                       All Categories
                     </Link>
                   </li>
-                  {categories?.map((c) => (
-                    <li>
+                  {categories?.map((c, index) => (
+                    <li key={index}>
                       <Link
                         className="dropdown-item"
                         to={`/category/${c.slug}`}
@@ -76,8 +76,8 @@ const Header = () => {
               {!auth?.user ? (
                 <>
                   <li className="nav-item">
-                    <NavLink to="/register" className="nav-link">
-                      Register
+                    <NavLink to="/signup" className="nav-link">
+                      SignUp
                     </NavLink>
                   </li>
                   <li className="nav-item">
