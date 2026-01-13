@@ -7,23 +7,19 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "ecommerce": "npm start --prefix ./ecommerce",
-    "dev": "concurrently \"npm run start\" \"npm run ecommerce\""
+    "dev": "nodemon server.js"
   },
-  "keywords": [],
   "author": "Sarthak Nagar",
   "license": "MIT",
   "description": "ecommerce rest api",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "braintree": "^3.25.0",
-    "build": "^0.1.4",
     "colors": "^1.4.0",
     "concurrently": "^9.0.1",
-    "corps": "^0.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
-    "express": "^5.0.0",
+    "express": "^4.19.2",
     "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.6.1",

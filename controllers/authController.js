@@ -84,7 +84,7 @@ export const loginController = async (req, res) => {
     if (!user) {
       return res.status(404).send({
         success: false,
-        message: "Email is not registereds",
+        message: "Email is not registered",
       });
     }
     const match = await comparePassword(password, user.password);
@@ -216,7 +216,7 @@ export const getOrderController = async (req, res) => {
     res.json(orders);
   } catch (error) {
     console.log(error);
-    req.status(500).send({
+    res.status(500).send({
       success: false,
       message: "Error while geting  orders",
       error,

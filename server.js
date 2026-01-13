@@ -1,6 +1,6 @@
+import "dotenv/config";
 import express from "express";
 import colors from "colors";
-import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
@@ -13,12 +13,6 @@ import { fileURLToPath } from "url"; // Import fileURLToPath for ES module compa
 // ES module-compatible __dirname workaround
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-//configure env
-dotenv.config();
-
-//databse config
-connectDB();
 
 //rest object
 const app = express();
@@ -45,8 +39,10 @@ app.get("/", (req, res) => {
 const PORT = process.env.PORT || 8080;
 
 //run listen
-app.listen(PORT, () => {
-  console.log(
-    `Server Running on mode on port ${PORT}`.cyan.bold // Use colors here
-  );
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(
+      `Server Running on mode on port ${PORT}`.cyan.bold // Use colors here
+    );
+  });
 });
